@@ -8,43 +8,51 @@ import { auth } from "@/firebase/firebase";
 import Logout from "../Buttons/Logout";
 import { authModalState } from "@/atoms/authModalAtom";
 import { useSetRecoilState } from "recoil";
-type TopbarProps = {};
+import Timer from "../Timer/Timer";
 
-const Topbar: React.FC<TopbarProps> = () => {
+type TopbarProps = {
+  problemPage: boolean;
+};
+
+const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
   const [user] = useAuthState(auth);
   const setAuthModalState = useSetRecoilState(authModalState);
   return (
     <nav className="relative flex h-[70px] w-full shrink-0 items-center px-5 bg-gradient-to-b from-black to-purple-800 text-white shadow-2xl">
       <div
-        className={`flex w-full items-center justify-between  max-w-[1200px] mx-auto `}
+        className={`flex w-full items-center justify-between  ${
+          !problemPage ? "max-w-[1200px] mx-auto" : ""
+        } `}
       >
         <Link href="/" className="h-[22px] flex-1">
           <img src="/logo.png" alt="Logo" className="w-8 h-10 mt-[-6px] " />
         </Link>
 
-        <div className="flex items-center gap-4 flex-1 justify-center">
-          <div
-            className="flex items-center justify-center rounded  h-8 w-8 cursor-pointer bg-gradient-to-r from-black to-purple-500 text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-black"
-            // onClick={() => handleProblemChange(false)}
-          >
-            <FaChevronLeft />
-          </div>
-          <Link
-            href="/"
-            className="flex items-center gap-2 font-medium max-w-[170px] cursor-pointer"
-          >
-            <div>
-              <BsList className="text-white" />
+        {problemPage && (
+          <div className="flex items-center gap-4 flex-1 justify-center">
+            <div
+              className="flex items-center justify-center rounded  h-8 w-8 cursor-pointer bg-gradient-to-r from-black to-purple-500 text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-black"
+              // onClick={() => handleProblemChange(false)}
+            >
+              <FaChevronLeft />
             </div>
-            <p className="text-white">Problem List</p>
-          </Link>
-          <div
-            className="flex items-center justify-center rounded  h-8 w-8 cursor-pointer bg-gradient-to-l from-black to-purple-500 text-white hover:bg-gradient-to-l hover:from-purple-500 hover:to-black"
-            // onClick={() => handleProblemChange(true)}
-          >
-            <FaChevronRight />
+            <Link
+              href="/"
+              className="flex items-center gap-2 font-medium max-w-[170px] cursor-pointer"
+            >
+              <div>
+                <BsList className="text-white" />
+              </div>
+              <p className="text-white">Problem List</p>
+            </Link>
+            <div
+              className="flex items-center justify-center rounded  h-8 w-8 cursor-pointer bg-gradient-to-l from-black to-purple-500 text-white hover:bg-gradient-to-l hover:from-purple-500 hover:to-black"
+              // onClick={() => handleProblemChange(true)}
+            >
+              <FaChevronRight />
+            </div>
           </div>
-        </div>
+        )}
 
         <div className="flex items-center space-x-4 flex-1 justify-end">
           <div>
@@ -53,7 +61,7 @@ const Topbar: React.FC<TopbarProps> = () => {
               target="_blank"
               rel="noreferrer"
               className="bg-gradient-to-l from-black to-purple-500 text-white px-2 py-1 sm:px-4 rounded-md text-sm font-medium
-                hover:text-white hover:bg-gradient-to-l hover:from-purple-500 hover:to-black hover:border-2  border-purple-700 border-2  border-transparent
+                hover:text-white hover:bg-gradient-to-l hover:from-purple-500 hover:to-black hover:border-2  border-purple-700 border-2  
                 transition-all duration-300 ease-in-out "
             >
               Premium
@@ -80,6 +88,7 @@ const Topbar: React.FC<TopbarProps> = () => {
               </button>
             </Link>
           )}
+          {user && problemPage && <Timer />}
           {user && (
             <div className="cursor-pointer group relative">
               <div className="border-2 border-purple-700 rounded-full">

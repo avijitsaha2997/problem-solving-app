@@ -18,12 +18,11 @@ const ProblemsTable: React.FC<ProblemsTableProps> = () => {
             <th className="px-2 py-4 font-medium whitespace-nowrap text-gray-100">
               <BsCheckCircle fontSize={"18"} width="18" />
             </th>
-            <td className="px-6 py-4">
+            <td className="px-6 py-4 w-32">
               {problem.title ? (
                 <Link
-                  href={problem.title}
-                  className="hover:text-purple-500 cursor-pointer "
-                  target="_blank"
+                  href={`/problems/${problem.id}`}
+                  className="hover:text-purple-500 cursor-pointer"
                 >
                   {problem.order}. {problem.title}
                 </Link>
@@ -31,8 +30,9 @@ const ProblemsTable: React.FC<ProblemsTableProps> = () => {
                 <Link
                   className="hover:text-purple-500 cursor-pointer"
                   href={`/problems/${problem.id}`}
+                  target="_blank"
                 >
-                  {problem.title}
+                  {problem.order}. {problem.title}
                 </Link>
               )}
             </td>
