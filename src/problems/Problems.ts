@@ -11,7 +11,7 @@ export const problems: Problem[] = [
   {
     id: "two-sum",
     title: "Two Sum",
-    level: "🟢",
+    level: "⚪️",
     category: "Array",
     order: 1,
     solution: "",
@@ -19,7 +19,7 @@ export const problems: Problem[] = [
   {
     id: "reverse-linked-list",
     title: "Reverse Linked List",
-    level: "🟡",
+    level: "⚪️⚪️",
     category: "Linked List",
     order: 2,
     solution: "",
@@ -27,7 +27,7 @@ export const problems: Problem[] = [
   {
     id: "jump-game",
     title: "Jump Game",
-    level: "🟡",
+    level: "⚪️⚪️",
     category: "Dynamic Programming",
     order: 3,
     solution: "",
@@ -35,7 +35,7 @@ export const problems: Problem[] = [
   {
     id: "valid-parentheses",
     title: "Valid Parentheses",
-    level: "🟢",
+    level: "⚪️",
     category: "Stack",
     order: 4,
     solution: "",
@@ -43,7 +43,7 @@ export const problems: Problem[] = [
   {
     id: "search-a-2d-matrix",
     title: "Search a 2D Matrix",
-    level: "🔴",
+    level: "⚪️⚪️⚪️",
     category: "Binary Search",
     order: 5,
     solution: "",
@@ -51,7 +51,7 @@ export const problems: Problem[] = [
   {
     id: "container-with-most-water",
     title: "Container With Most Water",
-    level: "🟡",
+    level: "⚪️⚪️",
     category: "Two Pointers",
     order: 6,
     solution: "",
@@ -59,7 +59,7 @@ export const problems: Problem[] = [
   {
     id: "merge-intervals",
     title: "Merge Intervals",
-    level: "🔴",
+    level: "⚪️⚪️⚪️",
     category: "intervals",
     order: 7,
     solution: "",
@@ -67,7 +67,7 @@ export const problems: Problem[] = [
   {
     id: "maximum-depth-of-binary-tree",
     title: "Maximum Depth of Binary Tree",
-    level: "🟢",
+    level: "⚪️",
     category: "Tree",
     order: 8,
     solution: "",
@@ -75,7 +75,7 @@ export const problems: Problem[] = [
   {
     id: "best-time-to-buy-and-sell-stock",
     title: "Best Time to Buy and Sell Stock",
-    level: "🟢",
+    level: "⚪️",
     category: "Array",
     order: 9,
     solution: "",
@@ -84,7 +84,7 @@ export const problems: Problem[] = [
   {
     id: "subsets",
     title: "Subsets",
-    level: "🟡",
+    level: "⚪️⚪️",
     category: "Backtracking",
     order: 10,
     solution: "",

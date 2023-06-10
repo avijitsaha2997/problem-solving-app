@@ -18,14 +18,14 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
   const [user] = useAuthState(auth);
   const setAuthModalState = useSetRecoilState(authModalState);
   return (
-    <nav className="relative flex h-[70px] w-full shrink-0 items-center px-5 bg-gradient-to-b from-black to-purple-800 text-white shadow-2xl">
+    <nav className="relative flex h-[50px] w-full shrink-0 items-center px-5 bg-gradient-to-b from-black to-purple-900 text-white ">
       <div
         className={`flex w-full items-center justify-between  ${
           !problemPage ? "max-w-[1200px] mx-auto" : ""
         } `}
       >
         <Link href="/" className="h-[22px] flex-1">
-          <img src="/logo.png" alt="Logo" className="w-8 h-10 mt-[-6px] " />
+          <img src="/logo.png" alt="Logo" className="w-8 h-10 mt-[-8px] " />
         </Link>
 
         {problemPage && (
@@ -81,7 +81,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
             >
               <button
                 className="bg-gradient-to-l from-black to-purple-500 text-white px-2 py-1 sm:px-4 rounded-md text-sm font-medium
-                hover:text-white hover:bg-gradient-to-l hover:from-purple-500 hover:to-black hover:border-2  border-purple-700 border-2  border-transparent
+                hover:text-white hover:bg-gradient-to-l hover:from-purple-500 hover:to-black hover:border-2  border-purple-700 border-2  
                 transition-all duration-300 ease-in-out "
               >
                 Sign In

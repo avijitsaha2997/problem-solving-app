@@ -36,7 +36,7 @@ const ProblemsTable: React.FC<ProblemsTableProps> = () => {
                 </Link>
               )}
             </td>
-            <td className={`px-6 py-4 `}>{problem.level}</td>
+            <td className={`px-6 py-4 opacity-90`}>{problem.level}</td>
             <td className={"px-6 py-4"}>{problem.category}</td>
             <td className={"px-6 py-4"}>
               <div className="flex items-center cursor-pointer ">
