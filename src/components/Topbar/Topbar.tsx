@@ -57,7 +57,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
         <div className="flex items-center space-x-4 flex-1 justify-end">
           <div>
             <a
-              href="https://www.buymeacoffee.com/burakorkmezz"
+              href="/"
               target="_blank"
               rel="noreferrer"
               className="bg-gradient-to-l from-black to-purple-500 text-white px-2 py-1 sm:px-4 rounded-md text-sm font-medium
