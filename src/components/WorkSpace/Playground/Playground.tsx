@@ -76,7 +76,9 @@ const Playground: React.FC<PlaygroundProps> = ({ problem }) => {
         </div>
       </Split>
 
-      <EditorFooter />
+      <EditorFooter handleSubmit={function (): void {
+        throw new Error("Function not implemented.");
+      } } />
     </div>
   );
 };
