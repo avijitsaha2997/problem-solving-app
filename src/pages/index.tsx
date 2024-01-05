@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <main className="bg-black min-h-screen">
-        <Topbar />
+        <Topbar problemPage={false} />
         <h1
           className="text-2xl text-center text-white dark:text-white font-medium
 					uppercase mt-10 mb-5"
